@@ -1,0 +1,29 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "a website about myself",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start test/karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwpmad/personal-website.git"
+  },
+  "author": "george maddocks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gwpmad/personal-website/issues"
+  },
+  "homepage": "https://github.com/gwpmad/personal-website#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.3",
+    "phantomjs": "^1.9.19"
+  },
+  "dependencies": {
+  }
+}

@@ -9,7 +9,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
   </head>
 
-  <body>
+  <body ng-app="AngularRequirements">
     <div class="row" id="header-name">
       <div class="col-sm-12">
         <span id="name">GEORGE MADDOCKS</span>
@@ -27,6 +27,7 @@
 
     <div class="row" id="three_panels"></div>
     <div class="row" id="social_links"></div>
-    <div class="row" id="github_repos"></div>
+    <div data-ng-controller="githubRepositoryListController as gitRepoListCtrl"
+     class="row" id="github_repos"></div>
   </body>
 </html>
