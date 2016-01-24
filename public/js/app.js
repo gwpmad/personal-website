@@ -1,4 +1,4 @@
 //main module
 (function() {
-  angular.module('AngularRequirements',['ngResource']);
+  angular.module('AngularRequirements',['ngResource','duParallax']);
 })();

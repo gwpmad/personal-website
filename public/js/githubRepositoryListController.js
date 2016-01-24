@@ -1,6 +1,4 @@
 (function() {
-
-
   function githubRepositoryListController(RepoRequest) {
     self = this;
 
