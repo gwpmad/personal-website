@@ -1,5 +1,5 @@
 describe('factory: RepoRequest', function(){
-  var repoRequest,repos =[{
+  var repoRequest,auth = 'feefe',repos =[{
     "foo": "bar"
   }];
 
@@ -16,7 +16,7 @@ describe('factory: RepoRequest', function(){
   beforeEach(inject(function($httpBackend) {
     httpBackend = $httpBackend;
     httpBackend
-    .when("GET", "https://api.github.com/users/gwpmad/repos?access_token=7bafccc58c21a85c420a826cb1f7ffa218fa959d")
+    .when("GET", "https://api.github.com/users/gwpmad/repos?access_token=f827"+auth+"7e6bb6d16d2f0585a4fbb6ae765221a")
     .respond(
       { repos: repos }
     );
@@ -32,7 +32,6 @@ describe('factory: RepoRequest', function(){
   });
 
   it('returns repos', function(){
-    console.log('repos: '+repos);
     repoRequest.query()
     .then(function(response){
       expect(response.data.repos).toEqual(repos);
