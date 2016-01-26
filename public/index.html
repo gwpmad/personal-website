@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>George Maddocks</title>
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
@@ -10,27 +10,25 @@
 
   <body data-ng-app="AngularRequirements">
     <div class="row">
-      <div class="col-sm-12" id="header-name">
-        <span id="name">GEORGE MADDOCKS</span>
+      <div id="header-name">
+        <p id="name">George Maddocks</p>
       </div>
     </div>
     <!-- <div class="row" id="strip-below-header">
       <div class="col-sm-12">
       </div>
     </div> -->
-
-    <div data-ng-controller = "ParallaxController as parCtrl" class="row" id="description">
-      <div class="col-sm-12">
-       <img src="assets/bridge.jpg" du-parallax y="parCtrl.background" alt="" / id="bridge-img">
-       <span id="main-text">
-         A product of the Makers Academy bootcamp, I've become
-         skilled at test-driven, object-oriented development. I'm looking for a
+<div class="row">
+    <div data-ng-controller = "ParallaxController as parCtrl" id="bridge-text-div"/>
+    <img src="assets/bridge.jpg" id="bridge" du-parallax y="parCtrl.background" alt="" />
+       <p id="main-text">
+         Skilled at test-driven, object-oriented development. I'm looking for a
          junior developer role where I can hone what I've learned and have fun
-         with it! I'd love to work in an agile environment where code quality is
-         valued and personal development is encouraged.
-       </span>
-     </div>
+         with it!
+       </p>
     </div>
+  </div>
+
 
     <div class="row" id="three_panels"></div>
     <div class="row" id="social_links"></div>

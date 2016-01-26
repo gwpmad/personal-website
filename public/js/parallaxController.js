@@ -1,7 +1,7 @@
 (function(){
   function parallaxController(parallaxHelper){
-    self = this;
-    self.background = parallaxHelper.createAnimator(-0.3);
+    var self = this,easingFactor = -0.3;
+    self.background = parallaxHelper.createAnimator(easingFactor);
   }
 
   angular.module('AngularRequirements')

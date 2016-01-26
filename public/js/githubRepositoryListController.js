@@ -1,6 +1,6 @@
 (function() {
   function githubRepositoryListController(RepoRequest) {
-    self = this;
+    var self = this;
 
     self.doRepoRequest = function() {
       RepoRequest.query()
