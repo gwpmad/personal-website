@@ -88,11 +88,6 @@ body {
   padding-bottom: 0.5em;
 }
 
-#bottom-strip {
-  background-color: black;
-  height: 0.4em
-}
-
 @media screen and (orientation:portrait) {
 
   #header-name {
