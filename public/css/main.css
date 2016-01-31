@@ -3,7 +3,7 @@ body {
 }
 
 #header-name {
-  background-color: #40d7a4;
+  background-color: #66ccff;
 }
 
 #strip-below-header {
@@ -34,7 +34,7 @@ body {
 
 #main-text{
   position: absolute;
-  top: 13em;
+  top: 6em;
   color: white;
   background: rgba(0, 0, 0, 0.7);
   padding: 1.5em;
@@ -42,10 +42,18 @@ body {
   font-size: xx-large;
 }
 
+.skill-title{
+  padding-left: 1em;
+}
+
+#github-repos{
+  background-color: #66ccff;  
+}
+
 @media screen and (orientation:portrait) {
 
   #header-name {
-    background-color: #40d7a4;
+    background-color: #66ccff;
     height: 13em;
   }
 

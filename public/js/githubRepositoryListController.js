@@ -5,7 +5,7 @@
     self.doRepoRequest = function() {
       RepoRequest.query()
         .then(function(response) {
-          self.reposArray = response.data;
+          self.reposObject = response.data;
         });
     };
   }

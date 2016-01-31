@@ -34,13 +34,13 @@ describe('GithubRepositoryListController', function() {
 
   describe('Pulling in repositories', function(){
     it('initialises with an empty array of repos', function() {
-      expect(ctrl.reposArray).toBeUndefined();
+      expect(ctrl.reposObject).toBeUndefined();
     });
 
     it('pulls in Github repositories', function(){
       ctrl.doRepoRequest();
       scope.$apply();
-      expect(ctrl.reposArray.repos).toEqual(repos);
+      expect(ctrl.reposObject.repos).toEqual(repos);
     });
   });
 });

@@ -1,48 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>George Maddocks</title>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
 
-  <body data-ng-app="AngularRequirements">
-    <div class="row">
-      <div id="header-name">
-        <p id="name">George Maddocks</p>
-      </div>
-    </div>
-    <!-- <div class="row" id="strip-below-header">
-      <div class="col-sm-12">
-      </div>
-    </div> -->
-<div class="row">
-    <div data-ng-controller = "ParallaxController as parCtrl" id="bridge-text-div"/>
-    <img src="assets/bridge.jpg" id="bridge" du-parallax y="parCtrl.background" alt="" />
-       <p id="main-text">
-         Skilled at test-driven, object-oriented development. I'm looking for a
-         junior developer role where I can hone what I've learned and have fun
-         with it!
-       </p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>George Maddocks</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body data-ng-app="AngularRequirements">
+  <div class="row">
+    <div id="header-name">
+      <p id="name">George Maddocks</p>
     </div>
   </div>
 
+  <div class="row">
+    <div data-ng-controller="ParallaxController as parCtrl" id="bridge-text-div" />
+    <img src="assets/bridge.jpg" id="bridge" du-parallax y="parCtrl.background" alt="" />
+    <p id="main-text">
+      Skilled at test-driven, object-oriented development. I'm looking for a junior developer role where I can hone what I've learned and have fun with it!
+    </p>
+  </div>
+  </div>
 
-    <div class="row" id="three_panels"></div>
-    <div class="row" id="social_links"></div>
-    <div data-ng-controller="GithubRepositoryListController as gitRepoListCtrl"
-     class="row" id="github_repos"></div>
+
+  <div class="row" id="three_panels">
+    <div class="col-sm-4">
+      <h3 class="skill-title"> An experienced, effective team member</h3>
+      <ul>
+        <li>A fast learner with experience in a variety of fields</li>
+        <li>A very strong written and verbal communicator</li>
+        <li>Experience in content creation and marketing as well as well as in an operational role, working alongside an agile development team at GroupM, part of WPP</li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="skill-title"> JavaScript</h3>
+      <ul>
+        <li>Confident with and competent at using the language within a web application context, as well as on its own</li>
+        <li>Familiar with frameworks like AngularJS, NodeJS and testing resources like Jasmine, Protractor and Karma</li>
+        <li>Worked on a number of different team and solo projects with a Javascript focus</li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="skill-title"> Ruby</h3>
+      <ul>
+        <li>Experience with using server-side Ruby to craft web applications with MVC structure</li>
+        <li>Familiar with and observant of key object-oriented programming principles
+        </li>
+        <li>Place an emphasis on test-driven development</li>
+        <li><a href="http://www.codewars.com/users/gwpmad">High Codewars
+            score</a>, largely based upon Ruby code challenges</li>
+      </ul>
+    </div>
+
+  </div>
+  <div data-ng-controller="GithubRepositoryListController as gitRepoListCtrl"
+  data-ng-init="gitRepoListCtrl.doRepoRequest()" class="row" id="github-repos">
+    <ul id="repos-unordered-list">
+      <li class="repository-li" ng-repeat="repo in gitRepoListCtrl.reposObject | orderBy:'-created_at' | limitTo:10">
+        <a href="{{repo.html_url}}"><span ng-bind="repo.name"></span></a>
+      </li>
+    </ul>
+
+  </div>
 
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/githubRepositoryListController.js"></script>
-    <script src="js/repoRequestFactory.js"></script>
-    <script src="js/parallaxController.js"></script>
-  </body>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+  <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/githubRepositoryListController.js"></script>
+  <script src="js/repoRequestFactory.js"></script>
+  <script src="js/parallaxController.js"></script>
+</body>
+
 </html>
