@@ -17,7 +17,8 @@
   </div>
 
   <div class="row">
-    <div data-ng-controller="ParallaxController as parCtrl" id="bridge-text-div" />
+    <div data-ng-controller="ParallaxController as parCtrl" id="bridge-text-div"
+    data-ng-init="parCtrl.setBackgroundForParallax()"/>
     <img src="assets/bridge.jpg" id="bridge" du-parallax y="parCtrl.background" alt="" />
     <p id="main-text">
       Skilled at test-driven, object-oriented development. I'm looking for a junior developer role where I can hone what I've learned and have fun with it!

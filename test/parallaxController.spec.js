@@ -7,8 +7,13 @@ describe('GithubRepositoryListController', function() {
     ctrl = $controller('ParallaxController');
   }));
 
-  describe('Background', function(){
-    it('initialises with an empty array of repos', function() {
+  describe('Changing background to parallax setting', function(){
+    it('initialises without background set to parallax setting', function() {
+      expect(ctrl.background).not.toBeDefined();
+    });
+
+    it('changes background to parallax setting', function(){
+      ctrl.setBackgroundForParallax();
       expect(ctrl.background).toBeDefined();
     });
   });
