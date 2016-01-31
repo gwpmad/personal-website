@@ -46,8 +46,53 @@ body {
   padding-left: 1em;
 }
 
-#github-repos{
-  background-color: #66ccff;  
+#github-repos-and-pic{
+  background-color: #66ccff;
+}
+
+#github-repos-title{
+
+  position: relative;
+  left: 1.7em;
+}
+
+#repos-unordered-list{
+  list-style-type: decimal;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-position: inside;
+  padding:right: 5em;
+  clear: both;
+}
+
+#personal-shot{
+  vertical-align: middle;
+  width: 70%;
+  float: right;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.repository-li{
+  font-size: 1.5em;
+}
+
+.personal-links{
+  font-size: 1.5em;
+}
+
+.repository-li a {
+  color: #787878;
+}
+
+#personal-links-div {
+  padding-left: 2em;
+  text-align:right;
+}
+
+#available-text{
+  padding-bottom: 0.5em;
 }
 
 @media screen and (orientation:portrait) {
@@ -82,6 +127,44 @@ body {
     padding: 1em;
     width: 64%;
     font-size: medium;
+  }
+
+  #github-repos-title {
+    padding-left: 1.9em;
+}
+
+  #repos-unordered-list{
+    list-style-type: decimal;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    list-style-position: inside;
+    float: right;
+    clear: both;
+    padding-right: 2.8em;
+  }
+
+  .repository-li{
+    font-size: 1.3em;
+  }
+
+  .personal-links{
+    font-size: 1.3em;
+  }
+
+  #personal-links-div{
+      padding-left: none;
+      top: 2em;
+      text-align:center;
+  }
+
+  #personal-shot{
+    width:40%;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3em;
+    padding-left: 1em;
   }
 
   body {
