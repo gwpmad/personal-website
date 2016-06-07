@@ -1,7 +1,8 @@
 (function() {
 
   function repoRequest($http) {
-    var auth = "feefe",queryURL = "https://api.github.com/users/gwpmad/repos?access_token=f827" + auth + "7e6bb6d16d2f0585a4fbb6ae765221a";
+    // Env variable set on Heroku using https://devcenter.heroku.com/articles/config-vars
+    var queryURL = "https://api.github.com/users/gwpmad/repos?access_token=" + process.env.API_KEY;
 
     return {
       query: function() {

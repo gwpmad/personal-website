@@ -10,13 +10,12 @@ describe('factory: RepoRequest', function(){
   }));
 
   var httpBackend;
-  beforeEach(function(){
-  });
+  var requestAddress = "https://api.github.com/users/gwpmad/repos?access_token=" + process.env.API_KEY;
 
   beforeEach(inject(function($httpBackend) {
     httpBackend = $httpBackend;
     httpBackend
-    .when("GET", "https://api.github.com/users/gwpmad/repos?access_token=f827"+auth+"7e6bb6d16d2f0585a4fbb6ae765221a")
+    .when("GET", requestAddress)
     .respond(
       { repos: repos }
     );
