@@ -1,5 +1,6 @@
 describe('factory: RepoRequest', function(){
-  var repoRequest,auth = 'feefe',repos =[{
+  var repoRequest
+  var repos =[{
     "foo": "bar"
   }];
 
@@ -10,7 +11,7 @@ describe('factory: RepoRequest', function(){
   }));
 
   var httpBackend;
-  var requestAddress = "https://api.github.com/users/gwpmad/repos?access_token=" + process.env.API_KEY;
+  var requestAddress = "/getrepositories";
 
   beforeEach(inject(function($httpBackend) {
     httpBackend = $httpBackend;
